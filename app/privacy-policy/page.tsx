@@ -167,7 +167,6 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="mt-4 p-6 bg-secondary rounded-lg">
                   <p className="font-semibold">Cesource Technical Private Limited</p>
-                  <p className="text-muted-foreground">Data Protection Officer</p>
                   <p className="text-muted-foreground">Sandanpur Road, Near Kumhrar</p>
                   <p className="text-muted-foreground">Patna, Bihar, India - 800006</p>
                   <p className="text-muted-foreground mt-2">Emails: info@csetepl.com</p>

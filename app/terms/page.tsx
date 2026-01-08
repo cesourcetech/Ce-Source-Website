@@ -112,7 +112,7 @@ const TermsOfService = () => {
               <div>
                 <h2 className="text-2xl font-bold mb-4">9. Governing Law</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  These Terms of Service shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bhubaneswar, Odisha.
+                  These Terms of Service shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Patna, Bihar.
                 </p>
               </div>
 
