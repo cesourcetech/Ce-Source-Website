@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export function ServicesSection() {
   return (
-    <section className=" bg-gray-50 overflow-hidden pb-6">
+    <section className=" bg-gray-50 overflow-hidden py-12">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="relative">

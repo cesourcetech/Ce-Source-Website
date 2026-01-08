@@ -52,7 +52,7 @@ export function AboutStats() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section id="about" className=" bg-white overflow-hidden mt-14">
+    <section id="about" className=" bg-white overflow-hidden pt-24 pb-12">
       <div className="container mx-auto px-6">
         <div className="flex items-center gap-3 mb-6">
             

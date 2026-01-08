@@ -2,7 +2,7 @@
 
 export function WhyUs() {
   return (
-    <section className=" bg-white overflow-hidden">
+    <section className=" bg-white overflow-hidden py-12">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="relative order-2 lg:order-1">

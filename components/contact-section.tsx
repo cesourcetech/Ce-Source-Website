@@ -58,7 +58,7 @@ export function ContactSection() {
     }
   };
   return (
-    <section id="contact" className=" bg-gray-50">
+    <section id="contact" className=" bg-gray-50 py-12">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-evenly gap-20 items-start">
           <div className="space-y-12">

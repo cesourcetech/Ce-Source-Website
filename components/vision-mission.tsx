@@ -2,7 +2,7 @@
 
 export function VisionMission() {
   return (
-    <section className=" bg-gray-50 overflow-hidden">
+    <section className=" bg-gray-50 overflow-hidden py-12">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-7 space-y-12">

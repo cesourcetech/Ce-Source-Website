@@ -16,7 +16,7 @@ const sectors = [
 
 export function SectorsGrid() {
   return (
-    <section id="sectors" className=" bg-white">
+    <section id="sectors" className=" bg-white py-12">
       <div className="container mx-auto px-6">
           <div className="max-w-3xl space-y-5 mb-14">
             <h2 className="text-sm font-bold tracking-[0.2em] text-[rgba(44,160,160,1)] uppercase mb-6">What We Do</h2>
