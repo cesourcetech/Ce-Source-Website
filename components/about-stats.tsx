@@ -80,7 +80,7 @@ export function AboutStats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="bg-secondary p-12 text-center group hover:bg-teal-light transition-colors"
+              className="bg-secondary p-4 sm:p-7 md:p-12 text-center group hover:bg-teal-light transition-colors"
             >
               <div className=" text-4xl sm:text-5xl md:text-6xl font-black text-foreground mb-4 group-hover:text-primary transition-colors">
                 <AnimatedCounter 
