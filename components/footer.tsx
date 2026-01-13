@@ -69,33 +69,50 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-background/40 mb-8">
-              Sectors
+              Quick Links
             </h3>
             <ul className="space-y-4 text-sm font-medium">
               <li>
-                Building and Infrastructure                                                              
+                <Link href="/" className="hover:text-primary transition-colors">
+                  Home
+                </Link>
               </li>
               <li>
-                  Transportation and E-Mobility                 
+                <Link
+                  href="/#about"
+                  className="hover:text-primary transition-colors"
+                >
+                  About Us
+                </Link>
               </li>
               <li>
-                  Construction and Utility                                                         
+                <Link
+                  href="/#contact"
+                  className="hover:text-primary transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+
+            <h3 className="text-xs font-bold uppercase tracking-widest text-background/40 my-8">
+              Policies
+            </h3>
+            <ul className="space-y-4 text-sm font-medium">
+              <li>
+                <Link href="/privacy-policy" className="hover:text-primary transition-colors">
+                Privacy Policy
+                </Link>
               </li>
               <li>
-                  Smart City                             
+                <Link
+                  href="/terms"
+                  className="hover:text-primary transition-colors"
+                >
+                  Terms of Service
+                </Link>
               </li>
-              <li>
-                  Green Energy
-              </li>
-              <li>
-                  Social and Economic
-              </li>
-              <li>
-                  Net Zero Emissions and Climate Change                         
-              </li>
-              <li>
-                  Innovation                        
-              </li>
+              
             </ul>
           </div>
 

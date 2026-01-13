@@ -14,7 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <HeroCarousel />
-      <div className=" container mx-auto space-y-12">
+      <div className=" container mx-auto space-x-7 md:space-y-12">
       <AboutStats />
       <WhyUs />
       <VisionMission />

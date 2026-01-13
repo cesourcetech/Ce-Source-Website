@@ -1,16 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Building2, Train, Zap, Cloud, Home, Users, Hammer, Lightbulb } from "lucide-react"
+import { Building2, Train, Zap, Cloud, Home, Users, Hammer, Lightbulb, Leaf, MountainSnow, BoxIcon } from "lucide-react"
 
 const sectors = [
   { name: "Building and Infrastructure", icon: Building2 },
   { name: "Transportation and E-Mobility", icon: Train },
-  { name: "Construction and Utility", icon: Zap },
+  { name: "Construction and Utility", icon: BoxIcon },
   { name: "Smart City", icon: Cloud },
-  { name: "Green Energy", icon: Home },
+  { name: "Green Energy", icon: Leaf },
   { name: "Social and Economic", icon: Users },
-  { name: "Net Zero Emissions and Climate Change", icon: Hammer },
+  { name: "Net Zero Emissions and Climate Change", icon: MountainSnow },
   { name: "Innovation", icon: Lightbulb },
 ]
 
@@ -36,11 +36,11 @@ export function SectorsGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="group aspect-square border border-gray-100 flex flex-col justify-between p-10 hover:bg-[rgba(44,160,160,1)] transition-colors duration-500"
+              className="group aspect-square border border-gray-100 flex flex-col justify-between p-10 hover:bg-primary transition-colors duration-500"
             >
-              <sector.icon className="w-10 h-10 text-[rgba(44,160,160,1)] group-hover:text-white transition-colors" />
+              <span className="m-auto"><sector.icon className=" w-25 h-25 text-primary group-hover:text-white transition-colors " /></span>
               <div className="space-y-4">
-                <h4 className="text-xl font-bold group-hover:text-white transition-colors leading-snug">
+                <h4 className="text-xl text-center font-bold group-hover:text-white transition-colors leading-snug">
                   {sector.name}
                 </h4>
                 <div className="w-0 group-hover:w-full h-[2px] bg-white transition-all duration-500" />

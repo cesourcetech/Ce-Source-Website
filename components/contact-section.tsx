@@ -79,7 +79,7 @@ export function ContactSection() {
                 <div className="flex  items-start gap-4">
                   <MapPin className="w-4 h-4 text-primary shrink-0 my-auto " />
                   <Link href="mailto:info@csetepl.com" className="text-gray-600 hover:text-primary transition-colors">
-                  Sandanpur Road, Near Kumhrar, Patna - 800006, Bihar, India
+                  Sandalpur Road, Near Kumhrar, Patna - 800006, Bihar, India
                   </Link>
                 </div>
                 
@@ -111,10 +111,10 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white p-12 shadow-2xl rounded-2xl relative">
-            <div className="grid grid-cols-2 gap-8 mb-8">
+          <form onSubmit={handleSubmit} className="bg-white p-12 shadow-2xl rounded-2xl relative w-full sm:w-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 w-full">
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700">Name</label>
+                <label className="text-sm font-bold text-gray-700 mb-2">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -127,7 +127,7 @@ export function ContactSection() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-bold text-gray-700">Email</label>
+                <label className="text-sm font-bold text-gray-700 mb-2">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -142,7 +142,7 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-2 mb-8">
-              <label className="text-sm font-bold text-gray-700">Message</label>
+              <label className="text-sm font-bold text-gray-700 mb-2">Message</label>
               <textarea
                 placeholder="Say Something..."
                 rows={6}
