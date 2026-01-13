@@ -7,9 +7,9 @@ import Link from "next/link"
 
 export function ServicesSection() {
   return (
-    <section className=" bg-gray-50 overflow-hidden py-12">
+    <section className=" bg-gray-50 overflow-hidden py-3.5 sm:py-7 ">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-x-20 gap-y-10 items-center">
           <div className="relative">
             <motion.div
               initial={{ scale: 1.1, opacity: 0 }}

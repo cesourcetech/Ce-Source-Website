@@ -30,13 +30,14 @@ export function Navbar() {
     { name: "Sectors", href: "/#sectors" },
     { name: "Services", href: "/services" },
     { name: "Contact", href: "/#contact" },
+    { name: "Careers", href: "/careers" },
   ]
 
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled || (pathname !== "/" && pathname.startsWith("/services"))
+        isScrolled || (pathname !== "/" || pathname.startsWith("/services") || pathname.startsWith("/careers"))
           ? "bg-[rgba(44,160,160,1)] py-4 shadow-lg"
           : "bg-transparent py-6",
       )}

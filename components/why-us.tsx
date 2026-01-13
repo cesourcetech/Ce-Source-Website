@@ -2,9 +2,9 @@
 
 export function WhyUs() {
   return (
-    <section className=" bg-white overflow-hidden py-12">
+    <section className=" bg-white overflow-hidden py-3.5 sm:py-7  mb-7 sm:mb-10">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-x-20 gap-y-10 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-8 relative h-40">
@@ -13,7 +13,7 @@ export function WhyUs() {
                   alt="Engineering Project"
                   className="w-full aspect-[3/4] h-86 object-cover"
                 />
-                <div className="absolute -top-2 -right-20 w-40 h-40 bg-white p-4 hidden md:block">
+                <div className="absolute -top-2 right-0 -sm:right-10 w-40 h-40 bg-white p-4 hidden md:block">
                   <img src="/why2.jpg" alt="Plan" className="w-full h-full object-cover" />
                 </div>
               </div>

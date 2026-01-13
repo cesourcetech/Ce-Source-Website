@@ -13,9 +13,9 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background pt-32 pb-12">
+    <footer className="bg-foreground text-background py-6 sm:py-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
           {/* Brand */}
           <div className="space-y-8">
           <Link href="/" className="text-2xl  font-bold text-white tracking-tighter">
@@ -107,6 +107,14 @@ export function Footer() {
                   className="hover:text-primary transition-colors"
                 >
                   Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="hover:text-primary transition-colors"
+                >
+                  Careers
                 </Link>
               </li>
             </ul>
@@ -205,7 +213,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-6 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs text-background/30">
             © {new Date().getFullYear()} Cesource Technical Private Limited. All
             rights reserved.

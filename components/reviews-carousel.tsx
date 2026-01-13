@@ -29,7 +29,7 @@ const reviews = [
 
 export function ReviewsCarousel() {
   return (
-    <section className=" bg-gray-50 overflow-hidden py-12">
+    <section className=" bg-gray-50 overflow-hidden py-3.5 sm:py-7">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-wider mb-4">Clients Reviews</h2>

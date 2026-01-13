@@ -58,7 +58,7 @@ export function ContactSection() {
     }
   };
   return (
-    <section id="contact" className=" bg-gray-50 py-12">
+    <section id="contact" className=" bg-gray-50 py-3.5 sm:py-7">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-center gap-x-20 gap-y-10 items-start ">
           <div className="space-y-12 my-auto">
@@ -111,7 +111,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-12 shadow-2xl rounded-2xl relative w-full sm:w-auto">
+          <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-12 rounded-2xl relative w-full sm:w-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 w-full">
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700 mb-2">Name</label>
@@ -119,7 +119,7 @@ export function ContactSection() {
                   type="text"
                   name="name"
                   placeholder="Your Name"
-                  className="w-full bg-gray-50 border-none px-4 py-4 rounded-lg focus:ring-2 focus:ring-[rgba(44,160,160,1)] transition-all"
+                  className="w-full bg-gray-50 mt-2 border px-4 py-4 rounded-lg focus:ring-2 focus:ring-[rgba(44,160,160,1)] transition-all"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
@@ -132,7 +132,7 @@ export function ContactSection() {
                   type="email"
                   name="email"
                   placeholder="email@example.com"
-                  className="w-full bg-gray-50 border-none px-4 py-4 rounded-lg focus:ring-2 focus:ring-[rgba(44,160,160,1)] transition-all"
+                  className="w-full bg-gray-50 border mt-2 px-4 py-4 rounded-lg focus:ring-2 focus:ring-[rgba(44,160,160,1)] transition-all"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
@@ -151,7 +151,7 @@ export function ContactSection() {
                 required
                 disabled={loading}
                 name="message"
-                className="w-full bg-gray-50 border-none px-4 py-4 rounded-lg focus:ring-2 focus:ring-[rgba(44,160,160,1)] transition-all resize-none"
+                className="w-full bg-gray-50 border mt-2 px-4 py-4 rounded-lg focus:ring-2 focus:ring-[rgba(44,160,160,1)] transition-all resize-none"
               />
             </div>
 

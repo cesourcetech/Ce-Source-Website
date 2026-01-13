@@ -2,12 +2,12 @@
 
 export function VisionMission() {
   return (
-    <section className=" bg-gray-50 overflow-hidden py-12">
+    <section className=" bg-gray-50 overflow-hidden py-3.5 sm:py-7">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-x-16 gap-y-8 items-center">
           <div className="lg:col-span-7 space-y-12">
             <div>
-              <span className="text-primary font-bold tracking-[0.3em] uppercase block mb-8">
+              <span className="text-primary font-bold tracking-[0.3em] uppercase block ">
                 Our Foundation
               </span>
             </div>

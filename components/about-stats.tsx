@@ -52,15 +52,14 @@ export function AboutStats() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (
-    <section id="about" className=" bg-white overflow-hidden pt-24 pb-12">
+    <section id="about" className=" bg-white overflow-hidden pt-7 sm:pt-14 pb-3.5 sm:pb-7">
       <div className="container mx-auto px-6">
-        <div className="flex items-center gap-3 mb-6">
-            </div>
-        <div className="flex flex-col lg:flex-row gap-16 mb-14">
+       
+        <div className="flex flex-col lg:flex-row gap-x-16 gap-y-8 mb-6">
           <div className="lg:w-1/3 mx-auto">
             <img src="/about.png" alt="" />
           </div>
-          <div className="lg:w-2/3 space-y-8">
+          <div className="lg:w-2/3 space-y-8 my-auto">
           <h2 className="text-sm font-bold tracking-[0.2em] text-[rgba(44,160,160,1)] uppercase mb-6">About Us</h2>
             <h3 className="text-4xl md:text-5xl font-bold leading-tight">
             We will provide you the best work you’ve always envisioned.
