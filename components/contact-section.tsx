@@ -60,8 +60,8 @@ export function ContactSection() {
   return (
     <section id="contact" className=" bg-gray-50 py-12">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row justify-evenly gap-20 items-start">
-          <div className="space-y-12">
+        <div className="flex flex-col lg:flex-row justify-center gap-x-20 gap-y-10 items-start ">
+          <div className="space-y-12 my-auto">
             <div>
               <h2 className="text-4xl font-bold mb-6">Let's Talk</h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-md">
@@ -111,7 +111,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white p-12 shadow-2xl rounded-2xl relative w-full sm:w-auto">
+          <form onSubmit={handleSubmit} className="bg-white p-6 sm:p-12 shadow-2xl rounded-2xl relative w-full sm:w-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 w-full">
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700 mb-2">Name</label>

@@ -87,6 +87,22 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/#sectors"
+                  className="hover:text-primary transition-colors"
+                >
+                  Sectors
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-primary transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#contact"
                   className="hover:text-primary transition-colors"
                 >
