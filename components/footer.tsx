@@ -211,6 +211,10 @@ export function Footer() {
             rights reserved.
           </p>
 
+          <p className="text-sm text-background/30">
+            Powered by <Link href="https://www.arevei.com" className=" text-[#00ffd9]">Arevei</Link>
+          </p>
+
           <div className="flex gap-8 text-xs font-bold uppercase tracking-widest text-background/30">
             <Link
               href="/privacy-policy"
