@@ -17,9 +17,12 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-12">
           {/* Brand */}
-          <div className="space-y-8">
-          <Link href="/" className="text-2xl  font-bold text-white tracking-tighter">
-            <Image src="/CeSource.png" alt="Logo" className="h-12 w-36 mb-8" width={200} height={200}/>
+          <div className="space-y-4">
+          <Link href="/" className="text-lg  font-bold text-white tracking-tighter">
+            <Image src="/CeSource.png" alt="Logo" className="h-12 w-36 mb-6" width={200} height={200}/>
+            <p className="text-primary font-bold tracking-[0.3em] uppercase block ">
+            Cesource Technical Private Limited
+              </p>
           </Link>
             <p className="text-background/50 leading-relaxed max-w-xs">
               Engineering excellence and consultancy services for a sustainable
@@ -120,7 +123,7 @@ export function Footer() {
             </ul>
 
             <h3 className="text-xs font-bold uppercase tracking-widest text-background/40 my-8">
-              Policies
+              Policy
             </h3>
             <ul className="space-y-4 text-sm font-medium">
               <li>

@@ -16,7 +16,7 @@ export function VisionMission() {
               <div className="bg-white px-12 py-6 shadow-sm hover:shadow-xl transition-all border-l-4 border-[rgba(44,160,160,1)]">
                 <h3 className="text-2xl font-bold mb-6">Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                Emerge as one of the leading and most trusted engineering and consultancy solution providers across the nation by consistently delivering innovative, reliable, and high-quality services. We aim to set industry benchmarks through our commitment to excellence, ethical practices, and client-centric approach, supported by a highly skilled, experienced, and dedicated workforce.
+                To emerge as one of the leading and most trusted engineering and consultancy solution providers across the nation by consistently delivering innovative, reliable, and high-quality services. We aim to set industry benchmarks through our commitment to excellence, ethical practices, and client-centric approach, supported by a highly skilled, experienced, and dedicated workforce.
                 </p>
               </div>
 

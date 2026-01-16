@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown, Loader2, Mail, MapPin, Phone } from "lucide-react"
+import { Building2, ChevronDown, Loader2, Mail, MapPin, Phone } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react";
 import { useToast } from "./ui/use-toast";
@@ -74,11 +74,16 @@ export function ContactSection() {
                 <ChevronDown className="w-5 h-5" />
                 <span>Visit us :</span>
               </div>
-
               <div className="pl-8 space-y-4">
                 <div className="flex  items-start gap-4">
+                  <Building2 className="w-4 h-4 text-primary shrink-0 my-auto " />
+                  <p className="text-gray-600 hover:text-primary transition-colors">
+                  Cesource Technical Private Limited
+                  </p>
+                </div>
+                <div className="flex  items-start gap-4">
                   <MapPin className="w-4 h-4 text-primary shrink-0 my-auto " />
-                  <Link href="mailto:info@csetepl.com" className="text-gray-600 hover:text-primary transition-colors">
+                  <Link href="https://maps.google.com/maps?ll=25.606253,85.18691&z=14&t=m&hl=en&gl=US&mapclient=embed&q=Sandalpur%20Rd%20Patna%2C%20Bihar%20800006" className="text-gray-600 hover:text-primary transition-colors">
                   Sandalpur Road, Near Kumhrar, Patna - 800006, Bihar, India
                   </Link>
                 </div>

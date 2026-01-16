@@ -16,7 +16,7 @@ export const services = [
   {
     id: "project-management",
     name: "Planning, Project, Programme and Procurement Management",
-    shortDesc: "End-to-end project lifecycle management",
+    shortDesc: "End-to-End Project Lifecycle Management",
     fullDesc: "Our comprehensive management services cover every aspect of project delivery. From strategic planning to procurement and execution, we ensure projects are delivered on time, within budget, and to the highest quality standards.",
     features: [
       "Project Planning and Scheduling",
@@ -31,7 +31,7 @@ export const services = [
   {
     id: "cost-consultancy",
     name: "Cost Consultancy",
-    shortDesc: "Accurate cost estimation and control",
+    shortDesc: "Accurate Cost Estimation and Control",
     fullDesc: "Our cost consultancy services provide accurate financial planning and control throughout your project. We deliver detailed cost estimates, value engineering, and ongoing financial monitoring to optimize project economics.",
     features: [
       "Detailed Cost Estimation, Budgeting and BOQ",
@@ -42,7 +42,7 @@ export const services = [
   {
     id: "risk-management",
     name: "Risk Management",
-    shortDesc: "Proactive risk identification and mitigation",
+    shortDesc: "Proactive Risk Identification and Mitigation",
     fullDesc: "We provide proactive risk management services to identify, assess, and mitigate potential risks early. Our comprehensive risk strategies protect investments and ensure project continuity.",
     features: [
       "Risk Identification and Assessment",
@@ -55,7 +55,7 @@ export const services = [
   {
     id: "project-report",
     name: "Project Report Preparation & Analytics",
-    shortDesc: "Data-driven insights and documentation",
+    shortDesc: "Data-Driven Insights and Documentation",
     fullDesc: "Our project reporting and analytics services deliver clear, actionable insights through comprehensive documentation and data analysis. We create detailed reports that support decision-making and project governance.",
     features: [
       "Detailed Project Documentation",
@@ -78,7 +78,8 @@ export const services = [
   {
     id: "quality-safety",
     name: "Quality and Safety Audit",
-    shortDesc: "Our quality and safety audit services ensure full compliance with regulatory requirements and industry standards. Through systematic audits, we identify risks, improve operational processes, and promote a culture of safety and quality excellence.",
+    shortDesc: "Compliant. Reliable. Safe.",
+    fullDesc: "Our quality and safety audit services ensure full compliance with regulatory requirements and industry standards. Through systematic audits, we identify risks, improve operational processes, and promote a culture of safety and quality excellence.",
     features: [
       "Comprehensive Safety Audit",
       "Quality Management System Audit",
@@ -90,7 +91,7 @@ export const services = [
   {
     id: "system-integration",
     name: "System Integration",
-    shortDesc: "Seamless integration of complex systems",
+    shortDesc: "Seamless Integration of Complex Systems",
     fullDesc: "We specialize in integrating diverse systems and technologies to create cohesive, efficient solutions. Our system integration expertise ensures seamless communication between different platforms, maximizing operational efficiency.",
     features: [
       "Multi-System Integration Planning and Support"
@@ -112,13 +113,13 @@ export const services = [
   {
     id: "assessment-survey",
     name: "Assessment, Study, Investigation and Survey",
-    shortDesc: "Thorough research and analysis",
+    shortDesc: "Thorough Research and Analysis",
     fullDesc: "We provide detailed assessments, studies, and surveys that form a strong foundation for informed decision-making. Our investigations deliver accurate data and actionable insights essential for effective project and business execution.",
     features: [
       "Site Survey and Assessment",
       "Project and Programme Assessment/Investigation",
       "Ecology and Environmental Study/Assessment",
-      "Technical and Feasibility study"
+      "Technical and Feasibility Study"
     ]
   }
 ];

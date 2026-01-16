@@ -142,7 +142,7 @@ export default function ServiceDetail() {
                 </h3>
                 <p className="mb-6 opacity-90">
                   Contact us today to discuss how our{" "}
-                  {currentService.name.toLowerCase()} can benefit your project.
+                  {currentService.name.toLowerCase()} can add value and ensure success for your project.
                 </p>
 
                 <Link

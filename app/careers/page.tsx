@@ -3,10 +3,11 @@
 import type React from "react"
 
 import { useState } from "react"
-import { ChevronDown, MapPin, Briefcase, GraduationCap, Heart, ArrowRight, Loader2 } from "lucide-react"
+import { ChevronDown, MapPin, Briefcase, GraduationCap, Heart, ArrowRight, Loader2, Upload } from "lucide-react"
+import { CldUploadWidget } from "next-cloudinary"
+import toast from "react-hot-toast"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { useToast } from "@/components/ui/use-toast"
 
 interface JobPosition {
   id: string
@@ -20,35 +21,35 @@ interface JobPosition {
 const jobs: JobPosition[] = [
   {
     id: "1",
-    title: "Senior Infrastructure Engineer",
-    department: "Infrastructure",
-    location: "Remote",
+    title: "BIM Engineer",
+    department: "Engineering",
+    location: "Hybrid",
     type: "Full-time",
-    description: "Design and implement scalable infrastructure solutions for complex projects.",
+    description: "Design and implement Building Information Modeling solutions for complex construction projects.",
   },
   {
     id: "2",
+    title: "Civil Engineer (QS)",
+    department: "Engineering",
+    location: "Hybrid",
+    type: "Full-time",
+    description: "Lead quantity surveying and cost management for infrastructure and construction projects.",
+  },
+  {
+    id: "3",
     title: "Project Manager",
     department: "Project Management",
     location: "On-site",
     type: "Full-time",
-    description: "Lead cross-functional teams in delivering quality projects on time.",
+    description: "Lead cross-functional teams in delivering quality projects on time and within budget.",
   },
   {
-    id: "3",
+    id: "4",
     title: "Consultancy Analyst",
     department: "Consultancy",
     location: "Hybrid",
     type: "Full-time",
     description: "Provide strategic consulting services to clients across various sectors.",
-  },
-  {
-    id: "4",
-    title: "Civil Engineer",
-    department: "Engineering",
-    location: "On-site",
-    type: "Full-time",
-    description: "Execute civil engineering projects with focus on sustainability.",
   },
   {
     id: "5",
@@ -85,12 +86,12 @@ const benefits = [
 
 export default function CareersPage() {
   const [expandedJob, setExpandedJob] = useState<string | null>(null)
-  const { toast } = useToast()
   const [loading, setLoading] = useState(false)
+  const [resumeUrl, setResumeUrl] = useState<string>("")
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    positionId: "",
+    position: "",
     coverLetter: "",
   })
 
@@ -99,7 +100,11 @@ export default function CareersPage() {
     setLoading(true)
 
     try {
-      const selectedJob = jobs.find((job) => job.id === formData.positionId)
+      if (!resumeUrl) {
+        toast.error("Please upload your resume")
+        setLoading(false)
+        return
+      }
 
       const response = await fetch(process.env.NEXT_PUBLIC_SHEET_DB || "", {
         method: "POST",
@@ -111,8 +116,9 @@ export default function CareersPage() {
             {
               fullName: formData.fullName,
               email: formData.email,
-              position: selectedJob?.title || formData.positionId,
+              position: formData.position,
               coverLetter: formData.coverLetter,
+              resume: resumeUrl,
               appliedDate: new Date().toLocaleString(),
             },
           ],
@@ -122,18 +128,12 @@ export default function CareersPage() {
 
       if (!response.ok) throw new Error("Failed to submit application")
 
-      toast({
-        title: "Application Submitted! 🎉",
-        description: "Thank you for your interest. We'll review your application and get back to you soon.",
-      })
+      toast.success("Application Submitted! 🎉 We'll review your application and get back to you soon.")
 
-      setFormData({ fullName: "", email: "", positionId: "", coverLetter: "" })
+      setFormData({ fullName: "", email: "", position: "", coverLetter: "" })
+      setResumeUrl("")
     } catch (error: any) {
-      toast({
-        title: "Error",
-        description: error.message || "Something went wrong. Please try again.",
-        variant: "destructive",
-      })
+      toast.error(error.message || "Something went wrong. Please try again.")
     } finally {
       setLoading(false)
     }
@@ -142,14 +142,14 @@ export default function CareersPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-32">
+      <main className="pt-16">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-10 lg:py-16">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-10 lg:py-14">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl">
               <span className="text-teal-400 font-semibold text-sm tracking-widest uppercase">Build Your Career</span>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mt-4 mb-6 leading-tight text-balance">
-                Join Our Team of Innovators
+                Join Our Team of Experts
               </h1>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 We're building a world-class team of engineers, consultants, and innovators. If you're passionate about
@@ -167,7 +167,7 @@ export default function CareersPage() {
         </section>
 
         {/* Why Join Us */}
-        <section className="py-10 lg:py-16 bg-white">
+        <section className="py-10 lg:py-14 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-teal-500 font-semibold text-sm tracking-widest uppercase">Why Join Cesource</span>
@@ -195,7 +195,7 @@ export default function CareersPage() {
         </section>
 
         {/* Company Culture */}
-        <section className="py-10 lg:py-16 bg-gray-50">
+        <section className="py-10 lg:py-14 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -240,15 +240,17 @@ export default function CareersPage() {
         </section>
 
         {/* Open Positions */}
-        <section id="open-positions" className="py-10 lg:py-16 bg-white">
+        <section id="open-positions" className="py-10 lg:py-14 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <span className="text-teal-500 font-semibold text-sm tracking-widest uppercase">Current Openings</span>
+              <span className="text-teal-500 font-semibold text-sm tracking-widest uppercase">
+                Current Openings (Only two positions)
+              </span>
               <h2 className="text-3xl lg:text-4xl font-bold mt-3 text-gray-900">Join Our Talented Team</h2>
             </div>
 
             <div className="max-w-3xl mx-auto space-y-4">
-              {jobs.map((job) => (
+              {jobs.slice(0, 2).map((job) => (
                 <div
                   key={job.id}
                   className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-all hover:border-teal-200"
@@ -297,7 +299,7 @@ export default function CareersPage() {
         </section>
 
         {/* Application Form Section */}
-        <section id="apply-form" className="py-10 lg:py-16 bg-gradient-to-br from-teal-50 to-blue-50">
+        <section id="apply-form" className="py-10 lg:py-14 bg-gradient-to-br from-teal-50 to-blue-50">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto">
               <span className="text-teal-600 font-semibold text-sm tracking-widest uppercase">Ready to apply?</span>
@@ -336,20 +338,15 @@ export default function CareersPage() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-900 mb-2">Position Applied For</label>
-                  <select
-                    value={formData.positionId}
-                    onChange={(e) => setFormData({ ...formData, positionId: e.target.value })}
+                  <input
+                    type="text"
+                    placeholder="e.g., BIM Engineer, Civil Engineer"
+                    value={formData.position}
+                    onChange={(e) => setFormData({ ...formData, position: e.target.value })}
                     required
                     disabled={loading}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent disabled:bg-gray-100"
-                  >
-                    <option value="">Select a position</option>
-                    {jobs.map((job) => (
-                      <option key={job.id} value={job.id}>
-                        {job.title}
-                      </option>
-                    ))}
-                  </select>
+                  />
                 </div>
 
                 <div>
@@ -363,6 +360,34 @@ export default function CareersPage() {
                     disabled={loading}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none disabled:bg-gray-100"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-900 mb-2">Upload Resume/CV</label>
+                  <CldUploadWidget
+                    uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
+                    onSuccess={(result: any) => {
+                      setResumeUrl(result.info.secure_url)
+                      toast.success("Resume uploaded successfully!")
+                    }}
+                    onError={() => {
+                      toast.error("Failed to upload resume")
+                    }}
+                  >
+                    {({ open }) => (
+                      <button
+                        type="button"
+                        onClick={() => open()}
+                        disabled={loading}
+                        className="w-full px-4 py-3 border-2 border-dashed border-gray-300 rounded-lg hover:border-teal-500 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                      >
+                        <Upload className="w-5 h-5 text-gray-400" />
+                        <span className="text-gray-600">
+                          {resumeUrl ? "Resume uploaded ✓" : "Click to upload resume"}
+                        </span>
+                      </button>
+                    )}
+                  </CldUploadWidget>
                 </div>
 
                 <button
