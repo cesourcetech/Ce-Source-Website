@@ -19,7 +19,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
           <Link href="/" className="text-lg  font-bold text-white tracking-tighter">
-            <Image src="/CeSource.png" alt="Logo" className="h-12 w-36 mb-6" width={200} height={200}/>
+            <Image src="/CeSource.png" alt="Logo" className="h-12 w-36 mb-6" loading="lazy" width={200} height={200}/>
             <p className="text-primary font-bold tracking-[0.3em] uppercase block ">
             Cesource Technical Private Limited
               </p>

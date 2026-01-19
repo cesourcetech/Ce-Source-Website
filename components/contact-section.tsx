@@ -109,9 +109,6 @@ export function ContactSection() {
                 </Link>
               </div>
             </div>
-                {/* <div className="rounded-xl overflow-hidden grayscale opacity-80 h-64 shadow-inner border border-gray-200">
-                  <img src="/city-map-pinpoint.jpg" alt="Location" className="w-full h-full object-cover" />
-                </div> */}
               </div>
             </div>
           </div>

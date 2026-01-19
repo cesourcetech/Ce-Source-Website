@@ -12,14 +12,14 @@ const slides = [
     title: "Engineering the Future of Building and Infrastructure",
     subtitle: "URBAN AND REGIONAL DEVELOPMENT",
     description: "Creating sustainable, technology-driven spaces that redefine modern living and work environments.",
-    video: "/b1.jpg",
+    image: "/b1.png",
   },
   {
     id: 2,
     title: "Seamless Transportation and E-Mobility ",
     subtitle: "Digital Transformation and Disruptive Innovation",
     description: "Innovating transit systems to ensure smoother, faster, and more efficient movement across borders.",
-    video: "/b2.jpg",
+    image: "/b2.jpg",
   },
   {
     id: 3,
@@ -27,14 +27,14 @@ const slides = [
     subtitle: "People, Economy and Growth",
     description:
       "Empowering communities through inclusive initiatives and capacity building, strengthening local economies by creating sustainable livelihoods, and shaping a resilient future. ",
-    video: "/b4.png",
+    image: "/b4.png",
   },
   {
     id: 4,
     title: "Adapting to Climate Change",
     subtitle: "Net Zero Emissions and Sustainability",
     description: "Designing resilient infrastructure that withstands environmental challenges for future generations.",
-    video: "/b3.jpg",
+    image: "/b3.jpg",
   },
 ]
 
@@ -62,7 +62,7 @@ export function HeroCarousel() {
 
   return (
     <section className="relative h-screen min-h-[800px] w-full overflow-hidden bg-black">
-      {/* Video Backgrounds */}
+      {/* image Backgrounds */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -73,17 +73,7 @@ export function HeroCarousel() {
           className="absolute inset-0"
         >
           <div className="absolute inset-0 bg-black/40 z-10" />
-          {/* <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover"
-            src={slides[currentSlide].video}
-          /> */}
-
-        <img className="h-full w-full object-cover"
-            src={slides[currentSlide].video} width={600} height={400}/>
+        <Image className="h-full w-full object-cover" src={slides[currentSlide].image} width={600} height={400} loading="lazy" alt={slides[currentSlide].title}/>
         </motion.div>
       </AnimatePresence>
 

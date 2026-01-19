@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export function VisionMission() {
   return (
     <section className=" bg-gray-50 overflow-hidden py-3.5 sm:py-7">
@@ -30,9 +32,12 @@ export function VisionMission() {
           </div>
 
           <div className="lg:col-span-5 h-[600px]">
-            <img
+            <Image
               src="/modern-architectural-yellow-building-facade.jpg"
               alt="Architecture"
+              width={600}
+              height={400}
+              loading="lazy"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             />
           </div>

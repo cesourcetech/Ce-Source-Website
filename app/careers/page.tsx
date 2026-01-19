@@ -8,6 +8,7 @@ import { CldUploadWidget } from "next-cloudinary"
 import toast from "react-hot-toast"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import Image from "next/image"
 
 interface JobPosition {
   id: string
@@ -229,10 +230,13 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="relative">
-                <img
+                <Image
                   src="/professional-team-collaboration.jpg"
                   alt="Team Collaboration"
                   className="rounded-lg shadow-xl w-full h-auto"
+                  width={600}
+                  height={400}
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -7,7 +7,9 @@ export default function ServicesPage() {
   return (
     <div>
         <Navbar/>
+        <div className='mb-8 mt-18'>
         <ServicesSection />
+        </div>
         <Footer/>
     </div>
   )
